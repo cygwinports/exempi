@@ -1,0 +1,7 @@
+category: Graphics
+requires: libexempi3 libexempi-devel
+sdesc: "Extensible Metadata Platform (XMP) implementation"
+ldesc: "Exempi is an implementation of XMP based on Adobe XMP SDK 4.1.1 
+and released under a BSD-style license like Adobe's. The API is C based 
+and means to be used from any language and be easier to maintain ABI 
+stability."

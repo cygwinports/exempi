@@ -1,0 +1,83 @@
+exempi
+------------------------------------------
+Exempi is an implementation of XMP based on Adobe XMP SDK 4.1.1 and 
+released under a BSD-style license like Adobe's. The API is C based and 
+means to be used from any language and be easier to maintain ABI 
+stability.
+
+Runtime requirements:
+  cygwin-1.5.24-2
+  libexpat0-1.95.8-2
+  libiconv2-1.11-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
+  automake1.10-1.10-1
+  binutils-20060817-1
+  cygport-0.3.7-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  gcc-g++-3.4.4-3
+  libboost-devel-1.34.1-1
+  libtool1.5-1.5.23a-2
+  make-3.81-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://libopenraw.freedesktop.org/wiki/Exempi
+
+Canonical download:
+  http://libopenraw.freedesktop.org/download/
+
+-------------------------------------------
+
+Build instructions:
+  unpack exempi-1.99.5-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./exempi-1.99.5-X.cygport all
+
+This will create:
+  /usr/src/exempi-1.99.5-X-src.tar.bz2
+  /usr/src/exempi-1.99.5-X.tar.bz2
+  /usr/src/libexempi-devel-1.99.5-X.tar.bz2
+  /usr/src/libexempi3-1.99.5-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary packages:
+
+(exempi)
+  /usr/share/doc/Cygwin/exempi-1.99.5.README
+  /usr/share/doc/exempi-1.99.5/AUTHORS
+  /usr/share/doc/exempi-1.99.5/COPYING
+  /usr/share/doc/exempi-1.99.5/ChangeLog
+  /usr/share/doc/exempi-1.99.5/INSTALL
+  /usr/share/doc/exempi-1.99.5/NEWS
+  /usr/share/doc/exempi-1.99.5/README
+
+(libexempi3)
+  /usr/bin/cygexempi-3.dll
+
+(libexempi-devel)
+  /usr/include/exempi-2.0/exempi/xmp.h
+  /usr/include/exempi-2.0/exempi/xmpconsts.h
+  /usr/include/exempi-2.0/exempi/xmperrors.h
+  /usr/lib/libexempi.a
+  /usr/lib/libexempi.dll.a
+  /usr/lib/libexempi.la
+  /usr/lib/pkgconfig/exempi-2.0.pc
+
+------------------
+
+Port Notes:
+
+----- version 1.99.5-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
