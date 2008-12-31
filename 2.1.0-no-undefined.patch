@@ -1,0 +1,18 @@
+--- origsrc/exempi-2.1.0/exempi/Makefile.am	2008-12-19 18:58:36.000000000 -0600
++++ src/exempi-2.1.0/exempi/Makefile.am	2008-12-30 21:57:18.393750000 -0600
+@@ -55,6 +55,7 @@
+ 	$(top_builddir)/third-party/MD5/libmd5.la \
+ 	-lexpat -lz
+ libexempi_la_LDFLAGS = -version-info @EXEMPI_VERSION_INFO@ \
++	-no-undefined \
+ 	-Wl,--retain-symbols-file=$(srcdir)/libexempi.sym
+ 
+ EXTRA_DIST = libexempi.sym
+--- origsrc/exempi-2.1.0/source/XMPFiles/FormatSupport/Makefile.am	2008-11-18 00:40:33.000000000 -0600
++++ src/exempi-2.1.0/source/XMPFiles/FormatSupport/Makefile.am	2008-12-30 22:14:49.487500000 -0600
+@@ -61,3 +61,5 @@
+ 	TIFF_FileWriter.cpp  XMPScanner.cpp  GIF_Support.cpp \
+ 	ASF_Support.hpp ASF_Support.cpp \
+ 	$(NULL)
++
++libformatsupport_la_LIBADD = -liconv
