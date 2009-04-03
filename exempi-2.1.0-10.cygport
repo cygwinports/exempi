@@ -6,3 +6,6 @@ PATCH_URI="2.1.0-no-undefined.patch"
 PKG_NAMES="${PN} lib${PN}3 lib${PN}-devel"
 libexempi3_CONTENTS="usr/bin/*-3.dll usr/share/doc/"
 libexempi_devel_CONTENTS='usr/include/ usr/lib/'
+
+# requires boost
+CYGCONF_ARGS="--disable-unittest"
