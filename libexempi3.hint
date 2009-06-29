@@ -1,5 +1,5 @@
 category: Graphics
-requires: cygwin libexpat1 libgcc1 libiconv2 libstdc++6 zlib0
+requires: libexpat1 libgcc1 libiconv2 libstdc++6 zlib0
 external-source: exempi
 sdesc: "Extensible Metadata Platform (XMP) implementation (runtime)"
 ldesc: "Exempi is an implementation of XMP based on Adobe XMP SDK 4.1.1 
