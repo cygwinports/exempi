@@ -6,7 +6,7 @@ means to be used from any language and be easier to maintain ABI
 stability.
 
 Runtime requirements:
-  cygwin-1.7.0-44
+  cygwin-1.7.0-61
   libexpat1-2.0.1-1
   libgcc1-4.3.2-2
   libiconv2-1.12-10
@@ -16,13 +16,14 @@ Runtime requirements:
 Build requirements:
 (besides corresponding -devel packages)
   autoconf2.5-2.63-10
-  automake1.10-1.10.1-10
-  binutils-20080624-2
-  cygport-0.9.6-1
-  gawk-3.1.6-2
+  automake1.10-1.10.2-10
+  binutils-2.19.51-1
+  cygport-0.9.9-1
+  gawk-3.1.7-1
   gcc4-core-4.3.2-2
   gcc4-g++-4.3.2-2
-  libtool-2.2.7a-12
+  libboost-devel-1.40.0-1
+  libtool-2.2.7a-14
   make-3.81-2
   sed-4.1.5-2
 
@@ -35,16 +36,16 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack exempi-2.1.0-X-src.tar.bz2
+2  unpack exempi-2.1.1-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./exempi-2.1.0-X.cygport all
+  cygport ./exempi-2.1.1-X.cygport all
 
 This will create:
-  /usr/src/exempi-2.1.0-X-src.tar.bz2
-  /usr/src/libexempi-devel-2.1.0-X.tar.bz2
-  /usr/src/libexempi3-2.1.0-X.tar.bz2
+  /usr/src/exempi-2.1.1-X-src.tar.bz2
+  /usr/src/libexempi-devel-2.1.1-X.tar.bz2
+  /usr/src/libexempi3-2.1.1-X.tar.bz2
 
 -------------------------------------------
 
@@ -70,6 +71,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 2.1.1-1 -----
+Version bump.
 
 ----- version 2.1.0-10 -----
 Initial release for Cygwin 1.7.
