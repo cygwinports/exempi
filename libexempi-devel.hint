@@ -1,5 +1,5 @@
 category: Graphics
-requires: libexempi3 libexpat1-devel libiconv libstdc++6-devel zlib-devel
+requires: libexempi3
 external-source: exempi
 sdesc: "Extensible Metadata Platform (XMP) implementation (development)"
 ldesc: "Exempi is an implementation of XMP based on Adobe XMP SDK 4.1.1 

@@ -1,0 +1,12 @@
+samples/source/common/Log.h:88:10: error: ‘FILE’ does not name a type
+
+--- origsrc/exempi-2.2.0/samples/source/common/Log.h	2011-11-13 00:57:42.000000000 -0600
++++ src/exempi-2.2.0/samples/source/common/Log.h	2012-03-05 19:53:32.579996000 -0600
+@@ -14,6 +14,7 @@
+ 
+ #include <stdexcept> // (xcode needs stdexcept to accept class declaration below )
+ #include <string>
++#include <cstdio>
+ 
+ 
+ #if XMP_WinBuild
