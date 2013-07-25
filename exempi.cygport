@@ -1,0 +1,27 @@
+NAME="exempi"
+VERSION=2.2.1
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="Extensible Metadata Platform (XMP) library"
+DESCRIPTION="Exempi is an implementation of XMP based on Adobe XMP SDK 4.1.1
+and released under a BSD-style license like Adobe's. The API is C based and
+means to be used from any language and be easier to maintain ABI stability."
+HOMEPAGE="http://libopenraw.freedesktop.org/wiki/Exempi"
+SRC_URI="http://libopenraw.freedesktop.org/download/exempi-${VERSION}.tar.gz"
+PATCH_URI="
+	2.1.1-no-undefined.patch
+	2.2.0-compile.patch
+	2.2.1-export-symbols.patch
+"
+
+PKG_NAMES="${NAME} lib${NAME}3 lib${NAME}-devel"
+exempi_CATEGORY="Graphics"
+exempi_SUMMARY="${SUMMARY% *} utility"
+exempi_CONTENTS="usr/bin/exempi.exe usr/share/doc/ usr/share/man/man1/"
+libexempi3_CONTENTS="usr/bin/cygexempi-3.dll"
+libexempi_devel_CONTENTS='usr/include/ usr/lib/'
+
+CPPFLAGS+=" -Dstricmp=stricmp"
+LIBS+=" -liconv"
+
+KEEP_LA_FILES="none"

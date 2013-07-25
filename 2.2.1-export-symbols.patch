@@ -1,0 +1,17 @@
+Using --retain-symbols-file removes enough debugging information to
+prevent a split debuginfo from being created (no source files are listed).
+
+--- origsrc/exempi-2.2.1/exempi/Makefile.am	2013-07-25 00:02:55.783135000 -0500
++++ src/exempi-2.2.1/exempi/Makefile.am	2013-07-25 02:03:22.089456000 -0500
+@@ -61,10 +61,7 @@ libexempi_la_LIBADD = $(top_builddir)/so
+ 	$(top_builddir)/third-party/MD5/libmd5.la \
+ 	-lexpat -lz
+ libexempi_la_LDFLAGS = -version-info @EXEMPI_VERSION_INFO@ -no-undefined
+-
+-if HAVE_SYMBOLS_FILE
+-libexempi_la_LDFLAGS += -Wl,--retain-symbols-file=$(srcdir)/libexempi.sym
+-endif
++libexempi_la_LDFLAGS += -export-symbols $(srcdir)/libexempi.sym
+ 
+ dist_man1_MANS = exempi.1
+ 
